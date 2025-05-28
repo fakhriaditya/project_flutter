@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const ARPage()),
                 );
               },
-              child: const Text('AR'),
+              child: const Text('Accounts Receivable (AR)'),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const APPage()),
                 );
               },
-              child: const Text('AP'),
+              child: const Text('Accounts Payable (AP)'),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
@@ -176,7 +176,7 @@ class ARPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AR'),
+        title: const Text('Accounts Receivable (AR)'),
         backgroundColor: const Color.fromARGB(255, 31, 2, 251),
       ),
       body: Center(
@@ -184,7 +184,7 @@ class ARPage extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           children: [
             const Text(
-              'AR',
+              'Accounts Receivable (AR)',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -208,7 +208,7 @@ class APPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AP'),
+        title: const Text('Accounts Payable (AP)'),
         backgroundColor: const Color.fromARGB(255, 31, 2, 251),
       ),
       body: Center(
@@ -216,7 +216,7 @@ class APPage extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           children: [
             const Text(
-              'AP',
+              'Accounts Payable (AP)',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),

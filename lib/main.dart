@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
   final String title;
 
   @override
@@ -38,64 +37,85 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0), // Memberikan padding keseluruhan
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Rata kiri
+        padding: const EdgeInsets.all(16.0),
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
           children: <Widget>[
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const GeneralLedgerPage(),
-                  ),
-                );
-              },
-              child: const Text('General Ledger'),
+            // Tombol General Ledger
+            SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const GeneralLedgerPage(),
+                    ),
+                  );
+                },
+                child: const Text('General Ledger'),
+              ),
             ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const CashAndBankPage(),
-                  ),
-                );
-              },
-              child: const Text('Cash and Bank'),
+
+            // Tombol Cash and Bank
+            SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CashAndBankPage(),
+                    ),
+                  );
+                },
+                child: const Text('Cash and Bank'),
+              ),
             ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ARPage()),
-                );
-              },
-              child: const Text('Accounts Receivable (AR)'),
+
+            // Tombol Accounts Receivable (AR)
+            SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ARPage()),
+                  );
+                },
+                child: const Text('Accounts Receivable (AR)'),
+              ),
             ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const APPage()),
-                );
-              },
-              child: const Text('Accounts Payable (AP)'),
+
+            // Tombol Accounts Payable (AP)
+            SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const APPage()),
+                  );
+                },
+                child: const Text('Accounts Payable (AP)'),
+              ),
             ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const FinancialReportPage(),
-                  ),
-                );
-              },
-              child: const Text('Financial Report'),
+
+            // Tombol Financial Report
+            SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FinancialReportPage(),
+                    ),
+                  );
+                },
+                child: const Text('Financial Report'),
+              ),
             ),
           ],
         ),
@@ -145,7 +165,7 @@ class GeneralLedgerPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('General Ledger'),
-        backgroundColor: const Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 31, 2, 251),
       ),
       body: Center(
         child: ListView(
@@ -177,7 +197,7 @@ class ARPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Accounts Receivable (AR)'),
-        backgroundColor: const Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 31, 2, 251),
       ),
       body: Center(
         child: ListView(
@@ -209,7 +229,7 @@ class APPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Accounts Payable (AP)'),
-        backgroundColor: const Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 31, 2, 251),
       ),
       body: Center(
         child: ListView(
@@ -241,7 +261,7 @@ class FinancialReportPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Financial Report'),
-        backgroundColor: const Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 31, 2, 251),
       ),
       body: Center(
         child: ListView(

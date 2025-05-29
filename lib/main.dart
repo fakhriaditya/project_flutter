@@ -36,16 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Wrap(
-          spacing: 10,
-          runSpacing: 10,
-          children: <Widget>[
-            // Tombol General Ledger
-            SizedBox(
-              width: 150,
-              child: ElevatedButton(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Wrap(
+            alignment:
+                WrapAlignment.center, // Pusatkan tombol secara horizontal
+            spacing: 10,
+            runSpacing: 10,
+            children: <Widget>[
+              // Tombol General Ledger
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -56,12 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('General Ledger'),
               ),
-            ),
 
-            // Tombol Cash and Bank
-            SizedBox(
-              width: 150,
-              child: ElevatedButton(
+              // Tombol Cash and Bank
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -72,12 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Cash and Bank'),
               ),
-            ),
 
-            // Tombol Accounts Receivable (AR)
-            SizedBox(
-              width: 150,
-              child: ElevatedButton(
+              // Tombol Accounts Receivable (AR)
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -86,12 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Accounts Receivable (AR)'),
               ),
-            ),
 
-            // Tombol Accounts Payable (AP)
-            SizedBox(
-              width: 150,
-              child: ElevatedButton(
+              // Tombol Accounts Payable (AP)
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -100,12 +96,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Accounts Payable (AP)'),
               ),
-            ),
 
-            // Tombol Financial Report
-            SizedBox(
-              width: 150,
-              child: ElevatedButton(
+              // Tombol Financial Report
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -116,8 +110,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Financial Report'),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

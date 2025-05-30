@@ -252,7 +252,7 @@ class ARPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Accounts Receivable (AR)'),
+        title: const Text('Finance Accounting System'),
         backgroundColor: Color.fromARGB(255, 92, 120, 94),
       ),
       body: Center(

@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fludaskaslklsdastter Tutorial',
+      title: 'Flutter Tutorial',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'fakri'),
+      home: const MyHomePage(title: 'Financial Accounting System'),
     );
   }
 }

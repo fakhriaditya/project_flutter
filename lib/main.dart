@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Finance Accounting System',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 19, 19, 151),
+          seedColor: const Color.fromARGB(255, 13, 13, 120),
         ),
       ),
       home: const MyHomePage(title: 'Finance Accounting System'),
@@ -220,7 +220,7 @@ class GeneralLedgerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('General Ledger'),
+        title: const Text('Finance Accounting System'),
         backgroundColor: Color.fromARGB(255, 131, 120, 217),
       ),
       body: Center(

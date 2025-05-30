@@ -188,7 +188,7 @@ class CashAndBankPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cash and Bank'),
+        title: const Text('Finance Accounting System'),
         backgroundColor: Colors.pinkAccent,
       ),
       body: Center(

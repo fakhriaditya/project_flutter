@@ -11,11 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Tutorial',
+      title: 'Finance Accounting System',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 19, 19, 151),
+        ),
       ),
-      home: const MyHomePage(title: 'Financial Accounting System'),
+      home: const MyHomePage(title: 'Finance Accounting System'),
     );
   }
 }
@@ -42,103 +44,133 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Wrap(
             alignment:
                 WrapAlignment.center, // Pusatkan tombol secara horizontal
-            spacing: 10,
-            runSpacing: 10,
+            spacing: 20, // Jarak horizontal antar elemen
+            runSpacing: 20, // Jarak vertikal antar baris
             children: <Widget>[
-              // Tombol General Ledger
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
-                onPressed: () {
-                  Center(
-                    child: Image.asset(
-                      'assets/images/GL.JPG',
-                      fit: BoxFit.cover,
+              // General Ledger
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/GL.JPG',
+                    height: 150, // Ukuran gambar
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(height: 10), // Jarak antara gambar dan tombol
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const GeneralLedgerPage(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(150, 40),
                     ),
-                  );
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const GeneralLedgerPage(),
-                    ),
-                  );
-                },
-                child: const Text('General Ledger'),
+                    child: const Text('General Ledger'),
+                  ),
+                ],
               ),
 
-              // Tombol Cash and Bank
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
-                onPressed: () {
-                  Center(
-                    child: Image.asset(
-                      'assets/images/Cash and Bank.jpg',
-                      fit: BoxFit.cover,
+              // Cash and Bank
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/Cash and Bank.jpg',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CashAndBankPage(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(150, 40),
                     ),
-                  );
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const CashAndBankPage(),
-                    ),
-                  );
-                },
-                child: const Text('Cash and Bank'),
+                    child: const Text('Cash and Bank'),
+                  ),
+                ],
               ),
 
-              // Tombol Accounts Receivable (AR)
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
-                onPressed: () {
-                  Center(
-                    child: Image.asset(
-                      'assets/images/AR.JPG',
-                      fit: BoxFit.cover,
+              // Accounts Receivable (AR)
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/AR.JPG',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ARPage()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(150, 40),
                     ),
-                  );
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ARPage()),
-                  );
-                },
-                child: const Text('Accounts Receivable (AR)'),
+                    child: const Text('Accounts Receivable (AR)'),
+                  ),
+                ],
               ),
 
-              // Tombol Accounts Payable (AP)
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
-                onPressed: () {
-                  Center(
-                    child: Image.asset(
-                      'assets/images/AP.JPG',
-                      fit: BoxFit.cover,
+              // Accounts Payable (AP)
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/AP.JPG',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const APPage()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(150, 40),
                     ),
-                  );
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const APPage()),
-                  );
-                },
-                child: const Text('Accounts Payable (AP)'),
+                    child: const Text('Accounts Payable (AP)'),
+                  ),
+                ],
               ),
 
-              // Tombol Financial Report
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
-                onPressed: () {
-                  Center(
-                    child: Image.asset(
-                      'assets/images/FR.JPG',
-                      fit: BoxFit.cover,
+              // Financial Report
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/FR.JPG',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FinancialReportPage(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(150, 40),
                     ),
-                  );
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const FinancialReportPage(),
-                    ),
-                  );
-                },
-                child: const Text('Financial Report'),
+                    child: const Text('Financial Report (FR)'),
+                  ),
+                ],
               ),
             ],
           ),
@@ -169,10 +201,10 @@ class CashAndBankPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('Kembali Ke Halaman Utama'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () => Navigator.pop(context),
+            //   child: const Text('Kembali Ke Halaman Utama'),
+            // ),
           ],
         ),
       ),
@@ -189,7 +221,7 @@ class GeneralLedgerPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('General Ledger'),
-        backgroundColor: Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 131, 120, 217),
       ),
       body: Center(
         child: ListView(
@@ -201,10 +233,10 @@ class GeneralLedgerPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('Kembali Ke Halaman Utama'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () => Navigator.pop(context),
+            //   child: const Text('Kembali Ke Halaman Utama'),
+            // ),
           ],
         ),
       ),
@@ -233,10 +265,10 @@ class ARPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('Kembali Ke Halaman Utama'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () => Navigator.pop(context),
+            //   child: const Text('Kembali Ke Halaman Utama'),
+            // ),
           ],
         ),
       ),
@@ -265,10 +297,10 @@ class APPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('Kembali Ke Halaman Utama'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () => Navigator.pop(context),
+            //   child: const Text('Kembali Ke Halaman Utama'),
+            // ),
           ],
         ),
       ),
@@ -297,10 +329,10 @@ class FinancialReportPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('Kembali Ke Halaman Utama'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () => Navigator.pop(context),
+            //   child: const Text('Kembali Ke Halaman Utama'),
+            // ),
           ],
         ),
       ),

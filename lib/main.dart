@@ -49,6 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
+                  Center(
+                    child: Image.asset(
+                      'assets/images/GL.JPG',
+                      fit: BoxFit.cover,
+                    ),
+                  );
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -63,6 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
+                  Center(
+                    child: Image.asset(
+                      'assets/images/Cash and Bank.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  );
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -77,6 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
+                  Center(
+                    child: Image.asset(
+                      'assets/images/AR.JPG',
+                      fit: BoxFit.cover,
+                    ),
+                  );
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const ARPage()),
@@ -89,6 +107,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
+                  Center(
+                    child: Image.asset(
+                      'assets/images/AP.JPG',
+                      fit: BoxFit.cover,
+                    ),
+                  );
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const APPage()),
@@ -101,6 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(fixedSize: Size(150, 40)),
                 onPressed: () {
+                  Center(
+                    child: Image.asset(
+                      'assets/images/FR.JPG',
+                      fit: BoxFit.cover,
+                    ),
+                  );
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -191,7 +221,7 @@ class ARPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Accounts Receivable (AR)'),
-        backgroundColor: Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 92, 120, 94),
       ),
       body: Center(
         child: ListView(
@@ -223,7 +253,7 @@ class APPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Accounts Payable (AP)'),
-        backgroundColor: Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 126, 141, 86),
       ),
       body: Center(
         child: ListView(
@@ -255,7 +285,7 @@ class FinancialReportPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Financial Report'),
-        backgroundColor: Color.fromARGB(255, 31, 2, 251),
+        backgroundColor: Color.fromARGB(255, 152, 154, 168),
       ),
       body: Center(
         child: ListView(
